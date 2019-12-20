@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2019 at 07:43 PM
+-- Generation Time: Dec 20, 2019 at 04:49 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -43,10 +43,9 @@ CREATE TABLE `info` (
 
 INSERT INTO `info` (`id`, `email`, `pass`, `cpass`, `uname`, `utype`) VALUES
 (1, 'minhajislam95@gmail.com', '12345678', '12345678', 'minhaj', 'Admin'),
-(2, 'habib@gmail.com', '12345678', '12345678', 'Habib', 'Admin'),
+(2, 'habib@gmail.com', '12345678', '12345678', 'Habib1', 'Admin'),
 (3, 'minhajislam1@gmail.com', '12345678', '12345678', 'minhaj1', 'Buyer'),
-(4, 'minhajislam99@gmail.com', '12345678', '12345678', 'min1', 'Seller'),
-(8, 'minhajislam951@gmail.com', '12345678', '12345678', 'minhaj1', 'Seller');
+(4, 'minhajislam99@gmail.com', '12345678', '12345678', 'min1', 'Seller');
 
 --
 -- Indexes for dumped tables

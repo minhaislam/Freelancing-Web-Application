@@ -6,12 +6,12 @@
 
 		if ( ! empty($req)) {
 			
-			$accept = fopen('Approved.txt', 'a+');
+			$accept = fopen('../txt/Approved.txt', 'a+');
 			$save=fwrite($accept, "$req"."\n");
 			fclose($accept);
 
 			// delete
-			$name='requests.txt';
+			$name='../txt/requests.txt';
 			$read = fopen($name, 'r');
 			$fetch = fread($read, filesize($name));
 			$lines= explode("\n", $fetch);
@@ -80,7 +80,7 @@
 	<legend>Pending Requests</legend>
 	<?php
 
-		$name='requests.txt';
+		$name='../txt/requests.txt';
 		$read = fopen($name, 'r');
 		$fetch = fread($read, filesize($name));
 		fclose($read);
