@@ -1,5 +1,8 @@
 <?php
+require_once('../db/database.php');
+
 session_start();
+
 		
 		if(isset($_POST['Add'])){
 		
@@ -164,12 +167,16 @@ if(isset($_COOKIE['uname'])){
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>
 		Info table
 	</title>
+	<script type="text/javascript"  src="../javascript/search.js"></script>
+	<script type="text/javascript"  src="../javascript/show.js"></script>
 </head>
 <body>
+
 	<table>
 	<center>
 	<tr>
@@ -308,6 +315,27 @@ if(isset($_COOKIE['uname'])){
 			</table>
 
 </form>
+
+
+		<legend>
+			<b>Search</b>
+		</legend>
+		<table>
+			<tr>
+				<td>
+					<input type="text" name="search" id="search" onkeyup="search(this.value)"><br>
+					<div id="result"></div>
+				</td>
+					<td>
+					<input type="submit" name="go" id="go" value="Go" onclick="show(document.getElementById('search').value)">
+				</td>
+			</tr>
+<tr>
+	<td>
+<div id="output"></div>
+</td>
+</tr>
+		</table>
 
 </body>
 </html>

@@ -54,6 +54,14 @@ $user=Profile($_SESSION['uname']);
 		
 		</td>
 		</tr>
+		<tr>
+		<td>
+		Password
+		</td>
+		<td>
+		<?php echo $user["pass"];?>
+		</td>
+		</tr>
 				<tr>
 		<td>
 		USER TYPE
