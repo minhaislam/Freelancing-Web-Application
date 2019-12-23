@@ -1,61 +1,4 @@
 "use strict"
-/*function valid(){
-	
-	var uname=document.forms["f1"]["uname"];
-	var email=document.forms["f1"]["email"].value;	
-	var pass=document.forms["f1"]["pass"];	
-	var cpass=document.forms["f1"]["cpass"];
-	
-	
-
-		if (pass.value!=cpass.value) {
-			alert("password don't match");
-			return false;
-		}  
-		else{
-			if (fname(name))
-			 {
-			  document.getElementById('em1').innerHTML=name.value;
-			  //alert(name.value);
-			//return true;
-		}
-			if (femail(email))
-			{	
-				document.getElementById('em2').innerHTML=email;
-			// return false;
-			}
-			if (funame(uname))
-			 {document.getElementById('em3').innerHTML=uname.value;
-			 	//return false;
-			 }
-			if (fpass(pass))
-			 {document.getElementById('em4').innerHTML=pass.value;
-			 	//return false;
-			 }
-			if (fcpass(cpass))
-			 {
-			 	document.getElementById('em5').innerHTML=name.value;
-			 	//return false;
-			 }
-				if (radio())
-			 {//document.getElementById('em6').innerHTML=r;
-			 //	return false;
-			 }
-				if (dob(d,m,y))
-					{document.getElementById('em7').innerHTML=d.value;
-						//return false;
-					}
-			
-			else{return false;}
-			alert(name.value+"\n"+email+"\n"+uname.value+"\n"+pass.value+"\n"+radio()+"\n"+d.value+"/"+m.value+"/"+y.value);
-			return true;
-				//
-			
-		}
-
-		
-return true;
-}*/
 
 		function funame() {
 			var uname=document.forms["f1"]["uname"];
@@ -179,27 +122,21 @@ function fpass () {
 			document.getElementById('em4').innerHTML="empty";
         return false;
 		}
-		else if(cpass.value.length<8){
-			document.getElementById('em4').innerHTML="must contain 8 characters";
+		else if(cpass.value.length!=pass.value.length){
+			document.getElementById('em4').innerHTML="length is not same";
         return false;
+		}
+		else if (cpass.value!=pass.value){
+			document.getElementById('em4').innerHTML="not same";
+        return false;
+		}
+		else {
+			document.getElementById('em4').innerHTML="&#10003";
+			return true;
 		}
 		
 	return cpass;
 		
 		}
 		
-		/*function search(val){
-			
-				var xhttp = new XMLHttpRequest();
-				xhttp.open("POST", "search.php", true);
-				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhttp.send('key='+val);
-			
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-					 	document.getElementById('em2').innerHTML = this.responseText;					 
-						
-					}
-					
-				};
-		}*/
+		
