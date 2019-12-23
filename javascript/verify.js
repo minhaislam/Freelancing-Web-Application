@@ -2,17 +2,13 @@
 
 		function funame() {
 			var uname=document.forms["f1"]["uname"];
-		//var uname=document.getElementById('uname');
-		//var n1 = document.getElementById('n1').textContent;
-		//alert(name.value);
 		if(uname.value==""){
-			//alert('empty');
+			
 			document.getElementById('em1').innerHTML="empty";
 			return false;
 		
 		}
 		else if(uname.value.length<2){
-			//alert('At least two words');
 			document.getElementById('em1').innerHTML="At least two words";
 		return false;
 		}
@@ -31,16 +27,12 @@
 
 		function femail() {
 			var email=document.forms["f1"]["email"].value;
-			//var email=document.getElementById('email').value;
-    //alert(email);
+			
     if (email=="") {
     	document.getElementById('em2').innerHTML="empty";
     return false;
     }
-   /* else if (search(email)) {
-    	return search(email);
-    	//return true;
-    }*/
+   
     else{
     	var emailParts = email.split('@');
     	if(emailParts.length !== 2) {
@@ -59,7 +51,7 @@
     else{
     	 var validChars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','.','0','1','2','3','4','5','6','7','8','9','_','-'];
 
-    // emailName must only include valid chars
+   
     for(var i = 0; i < emailName.length; i += 1) {
         if(validChars.indexOf(emailName.charAt(i)) < 0 ) {
              document.getElementById('em2').innerHTML="Invalid character in name section";
@@ -94,9 +86,7 @@
 }
 
 function fpass () {
-		//var pass=document.getElementById('pass');
-		//var n1 = document.getElementById('n1').textContent;
-		//alert(name.value);
+		
 		var pass=document.forms["f1"]["pass"];
 		if(pass.value==""){
 			document.getElementById('em3').innerHTML="empty";
@@ -115,9 +105,6 @@ function fpass () {
 
 		function fcpass () {
 			var cpass=document.forms["f1"]["cpass"];
-		//var cpass=document.getElementById('pass');
-		//var n1 = document.getElementById('n1').textContent;
-		//alert(name.value);
 		if(cpass.value==""){
 			document.getElementById('em4').innerHTML="empty";
         return false;
