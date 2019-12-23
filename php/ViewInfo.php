@@ -119,8 +119,8 @@ elseif (isset($_POST['Update'])) {
 			
 		}
 		}
-		if(isset($_GET['id'])) { 
-				$id = $_GET['id'];
+		if(isset($_POST['id'])) { 
+				$id = $_POST['id'];
 				$_SESSION['id']=$id;
 $con=mysqli_connect('localhost','root','','fwa');
 			$sql="DELETE from info where id='$id'";

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2019 at 02:10 PM
+-- Generation Time: Dec 23, 2019 at 06:45 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -45,8 +45,8 @@ INSERT INTO `info` (`id`, `email`, `pass`, `cpass`, `uname`, `utype`) VALUES
 (1, 'minhajislam95@gmail.com', '12345678', '12345678', 'minhaj', 'Admin'),
 (2, 'habib@gmail.com', '12345678', '12345678', 'Habib1', 'Admin'),
 (3, 'minhajislam1@gmail.com', '12345678', '12345678', 'minhaj1', 'Buyer'),
-(4, 'minhajislam99@gmail.com', '12345678', '12345678', 'min1', 'Seller'),
-(5, 'min22@gmail.com', '123456789', '123456789', 'min22', 'Seller');
+(5, 'min22@gmail.com', '123456789', '123456789', 'min22', 'Seller'),
+(6, 'minhajislam951@gmail.com', '12345677', '12345677', 'minhaj11', 'Seller');
 
 --
 -- Indexes for dumped tables
@@ -66,7 +66,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT for table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

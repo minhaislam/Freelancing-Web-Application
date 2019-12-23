@@ -77,7 +77,15 @@ $user=Profile($_SESSION['uname']);
 		<a href="AdminHome.php">Go Home</a><br>
 			</td>
 		</table>
-
+		<input type="file" name="file" id="iamge">
+		<input type="submit" name="upload" value="upload" id="uplaod" onclick="imgupload()">
+		<img style="min-height: 120;min-width: 200;max-height: 120px">
+		<iframe name="iframe"></iframe>
+		<script type="text/javascript">
+			function imgupload() {
+				document.getElementById('image')
+			}
+		</script>
 		<form method="POST" action="">
 			<fieldset>
 			<legend><b>Change Password</b></legend>

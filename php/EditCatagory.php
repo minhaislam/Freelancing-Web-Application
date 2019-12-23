@@ -1,51 +1,29 @@
 <?php
+require_once('../db/database.php');
 	if (isset($_POST['addC'])) {
-
 		$add=$_POST['add'];
-		
-
-		if ( ! empty($add)) {
-			
-			$added = fopen('catagory.txt', 'a+');
-			$save=fwrite($added, "$add"."\n");
-			fclose($added);
-
-			
-			
-			header('location: EditCatagory.php');
+		$conn = dbconnect();
+	
+	$sql="insert into catagories(title) values('{$add}')";
+	$set=mysqli_query($conn,$sql);
+	header('location: EditCatagory.php');
 		}
-	}
+	
 	if (isset($_POST['delete'])) {
-
-		$del=$_POST['EditC'];
-		$line = $_POST['lineNumber']-1;
-
-		if ( ! empty($del)) {
-
-			// delete
-			$name='../txt/catagory.txt';
-			$read = fopen($name, 'r');
-			$fetch = fread($read, filesize($name));
-			$lines= explode("\n", $fetch);
-
-			$newLines = [];
-
-			foreach ($lines as $lineNumber => $lineValue) {
-				if ($lineNumber == $line) {
-					$newLines[] = '';
-				} else {
-					$newLines[] = $lineValue . "\n";
-				}
-			}
-
-			// array to sring converstion 
-			$arrayData = array_filter($newLines);
-
-			file_put_contents($name, $arrayData);
-			
-			header('location: EditCatagory.php');
-		}
+		
+}
+	if(isset($_COOKIE['uname'])){
+		
 	}
+	if(isset($_GET['id'])) { 
+				$id = $_GET['id'];
+				$_SESSION['id']=$id;
+$con=dbconnect();
+			$sql="DELETE from catagories where id='$id'";
+			$set=mysqli_query($con,$sql);
+			header('location: EditCatagory.php');
+		mysqli_close($conn);
+}
 	if(isset($_COOKIE['uname'])){
 
 ?>
@@ -67,33 +45,48 @@
 				<tr><input type="submit" name="addC" value="Add"></tr>
 			</table>
 		</form>
+
+
+		<table>
+		<thead>
+		<tr>
+			<th><div style="background-color:red ">ID</div></th>
+			<th> <div style="background-color:red ">Catagory</div></th>
+			
+		</tr>	
+          </thead>
+
+          <tbody>
+          	   <?php
+          	  $conn=dbconnect();
+			$sql="select * from catagories";
+			$get=mysqli_query($conn,$sql);
+			
+   if(count($get)>0){
+	while ($catagory=mysqli_fetch_assoc($get)) {
 	
-	<?php
-
-		$name='../txt/catagory.txt';
-		$read = fopen($name, 'r');
-		$fetch = fread($read, filesize($name));
-		fclose($read);
-		$lines=explode("\n", $fetch);
-		//echo var_dump($lines);
-		$lineNumber = 1;
-
-		foreach (array_filter($lines) as $line) {		
 	?>
+					<tr>
+						<td id="cid"><div style="background-color:red "><?php echo $catagory["id"];?></div></td>
+		          		<td><div style="background-color:red; color: yellow; "><?php echo $catagory["title"];?></div></td>		     <td> <a href="EditCatagory.php?id=<?php echo $catagory['id']; ?>" style="text-decoration:none; background-color: green; color: white;">Delete</a>
+			</td>
+		          	</tr>
+		         	
+
+    <?php
+    		}
+    	}
 	
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<input type="hidden" name="lineNumber" value="<?php echo $lineNumber; ?>">
+	?>	
 
-			<table>
-				<tr><input type="text" style="height: 70px;width: 70%" name="EditC" value="<?php echo $line; ?>"> </tr>
-				<tr><input type="submit" name="delete" value="delete"></tr>	
-			</table>
-		</form>
-	<?php
-			$lineNumber++;
 
-		}
-	?>
+          </tbody>	
+        
+
+
+	</table>
+	
+	
 	<form method="post" action="">
 		
 
