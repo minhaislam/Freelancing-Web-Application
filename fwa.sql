@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2019 at 05:30 AM
+-- Generation Time: Dec 24, 2019 at 06:32 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -62,13 +62,14 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`id`, `email`, `pass`, `cpass`, `uname`, `utype`) VALUES
-(1, 'minhajislam95@gmail.com', '12345678', '12345678', 'minhaj', 'Admin'),
+(1, 'minhajislam95@gmail.com', '123456789', '123456789', 'minhaj', 'Admin'),
 (2, 'habib@gmail.com', '12345678', '12345678', 'Habib1', 'Admin'),
 (3, 'minhajislam1@gmail.com', '12345678', '12345678', 'minhaj1', 'Buyer'),
 (9, 'habibulamin20@outlook.com', '123456789', '123456789', 'ha', 'Seller'),
 (11, 'abc@g.com', '12345678', '12345678', 'ha123', 'Buyer'),
 (12, 'kinjo@g.com', '12345678', '12345678', 'kinjo123', 'Seller'),
-(13, 'vg@g.com', '12345678', '12345678', 'vg12', 'Seller');
+(13, 'vg@g.com', '12345678', '12345678', 'vg12', 'Seller'),
+(14, 'minhajislam121@gmail.com', '12345678', '12345678', 'minhaj121', 'Seller');
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,7 @@ ALTER TABLE `catagories`
 -- AUTO_INCREMENT for table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `logs`
