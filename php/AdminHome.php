@@ -10,43 +10,37 @@ if(isset($_COOKIE['uname'])){
 <html>
 <head>
 	<title>Admin</title>
+	<link rel="stylesheet" type="text/css" href="../Css/adminhome.css" />
 </head>
 <body align="center">
 	
+	
+		<header>
+			<h2>FreelanceSite</h2>
+			<h1>Welcome Home!!! <?php echo $_SESSION['uname'];?> </h1>
+		</header>
 		
-		<table  style="border-bottom:1px solid #888;">
-			<thead>
-				<tr>
-					<td width="100px"><b><font size="6">FreelanceSite</font></b></td>
-					<td align="center" width="500"><h1>Welcome Home!!! <?php echo $_SESSION['uname'];?> </h1></td>
-
-<td><a href="viewinfo.php">View Info</a><br></td>
-		<td><a href="logout.php">Logout</a><br></td>
-		<td><a href="Jobreq.php">Job Requests</a><br></td>
-		<td><a href="EditCatagory.php">Edit Catagory</a><br></td>
-		<td><a href="FreelancerDetails.php">Freelancer Details</a><br></td>
-		<td><a href="Analytics.php">Analytics</a><br></td>
-		<td><a href="UserAnalysis.php">User Analysis</a><br></td>
-		<td><a href="Message.php">Message</a><br></td>
-		<td><a href="Notification.php">Notificstion</a><br>
-			<td>
-		<a href="profile.php">Profile</a><br>
-	</td>
-
-	<td style="border-top:1px solid #888;" colspan="8"></td>
-
-
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					
+	<div>	
+	
+		<div class="pos"><a class="testclass;" href="viewinfo.php">View Info</a></div>
+		<div class="pos"><a class="testclass;" href="Jobreq.php">Job req</a></div>
+		<div class="pos"><a  class="testclass;" href="FreelancerDetails.php">Freelancer Details</a></div>
+		<div><a href="Analytics.php"><img src="../img/analytic.png" width="30px" height="30px" title="Analytics"></a></div>
+		<div><a href="UserAnalysis.php"><img src="../img/unal.png" width="30px" height="30px" title="User Analysis"></a></div>
+		<div><a href="Message.php"><img src="../img/msg.png" width="30px" height="20px" title="Message"></a></div>
+		<div><a href="EditCatagory.php"><img src="../img/editcat.png" width="30px" height="30px" title="Edit Catagory" ></a></div>
+		<div><a href="Notification.php"><img src="../img/bell.png" width="30px" height="30px" title="Notification"></a></div>
+		<div><a href="profile.php"><img src="../img/profile.png" width="30px" height="30px" title="Profile" ></a></div>
+		<div><a href="logout.php"><img src="../img/logout.png" width="25px" height="25px" title="Logout"></a></div>
 		
-		<td></td>
-		</tr>
-		</tbody>
-</table>
+	</div>	
+		
+		
+			
+	
+
+
+
 </body>
 
 

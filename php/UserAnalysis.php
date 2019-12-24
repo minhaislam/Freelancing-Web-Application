@@ -9,6 +9,7 @@ if(isset($_COOKIE['uname'])){
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="../Css/css.css" />
 </head>
 <body>
 	<h1>No of users:</h1>
@@ -37,17 +38,17 @@ if(isset($_COOKIE['uname'])){
     	}
     	?>
 			
-		<td style="padding:0 50px;">
-			<div style="background-color: #336699; color: #ffcc00;text-align: center;">Admin:<?php echo $a;?></div>
-		</td>
+		
+			<div s>Admin:<?php echo $a;?></div>
+		
 
-		<td style="padding:0 55px;">
-			<div style="background-color: #336699; color: #ffcc00;text-align: center;">Buyer:<?php echo $b;?></div>
-		</td>
+	
+			<div >Buyer:<?php echo $b;?></div>
+		
 
-		<td style="padding:0 50px;">
-			<div style="background-color: #336699; color: #ffcc00;text-align: center;">Seller:<?php echo $s;?></div>
-		</td>
+		
+			<div >Seller:<?php echo $s;?></div>
+		
 		
 		 <?php
     	}
@@ -68,7 +69,7 @@ if (isset($_POST['sdays'])) {
 
 ?>
 
-<a href="AdminHome.php">Home</a>
+<a href="adminhome.php"><img src="../img/home.png" width="30px" height="30px" title="Profile" ></a>
 </body>
 </html>
 <?php

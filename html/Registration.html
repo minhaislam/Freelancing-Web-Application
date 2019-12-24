@@ -3,12 +3,52 @@
 <head>
 	<title></title>
 	<script type="text/javascript"  src="../javascript/verify.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Css/reg.css" />
 </head>
 <body>
-	<center>
+	
 	<form method="POST"  name="f1"  action="../php/Registrationcheck.php">
+	<div class=>
+		<header>
+		<h2>Registration</h2>
+		</header>
+		
+		<div>
+		
 			
-			<legend><b>REGISTRATION<br><hr width="150"></b></legend>
+			<input  class= type="text" name="uname" id="uname" placeholder="User name"  onkeyup="return funame();" value="">
+			
+			<span id="em1"></span>
+		<br>
+     
+        
+    
+     		<input class= type="text" name="email" id="email" placeholder="Email"  onkeyup="return femail();" value="">
+			
+			<span id="em2"></span>
+
+		<br>
+		
+			<input class= type="password" name="pass" id="pass" placeholder="Password"  onkeyup="return fpass();" value=""><span id="em3"></span>
+			
+		<br>
+			<input class= type="password" name="cpass" id="cpass" placeholder="Confirm Password"  onkeyup="return fcpass();" value=""><span id="em4"></span>
+			
+		<br>
+		
+			
+			
+      <input class='button' type="submit" name="signup" value="Sign Up"/>
+		
+      <br>
+	<p>Already a member? <a href="signin.html">Sign In</a></p><br>
+				<p><a  href="../Home.html">Home</a></p>
+				
+     
+   </div>	
+		</div>
+	</div>
+			<!-- <legend><b>REGISTRATION<br><hr width="150"></b></legend>
 			<table cellpadding="5px">
 			<tr>
 				<td>
@@ -41,8 +81,9 @@
 				<a href="../Home.html">Home</a>
 			</td>
 			</tr>			
-			</table>
+			</table> -->
 	</form>
+	
 
 </body>
 </html>

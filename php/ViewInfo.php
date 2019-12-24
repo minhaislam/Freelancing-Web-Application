@@ -174,25 +174,26 @@ if(isset($_COOKIE['uname'])){
 	</title>
 	<script type="text/javascript"  src="../javascript/search.js"></script>
 	<script type="text/javascript"  src="../javascript/show.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Css/viewinfo.css" />
+	
 </head>
 <body>
+		<div class="pos"><a class="testclass;" href="Jobreq.php">Job req</a></div>
+		<div class="pos"><a  class="testclass;" href="FreelancerDetails.php">Freelancer Details</a></div>
+		<div><a href="Analytics.php"><img src="../img/analytic.png" width="30px" height="30px" title="Analytics"></a></div>
+		<div><a href="UserAnalysis.php"><img src="../img/unal.png" width="30px" height="30px" title="User Analysis"></a></div>
+		<div><a href="Message.php"><img src="../img/msg.png" width="30px" height="20px" title="Message"></a></div>
+		<div><a href="EditCatagory.php"><img src="../img/editcat.png" width="30px" height="30px" title="Edit Catagory" ></a></div>
+		<div><a href="Notification.php"><img src="../img/bell.png" width="30px" height="30px" title="Notification"></a></div>
+		<div><a href="adminhome.php"><img src="../img/home.png" width="30px" height="30px" title="Profile" ></a></div>
+		<div><a href="profile.php"><img src="../img/profile.png" width="30px" height="30px" title="Profile" ></a></div>
+		<div><a href="logout.php"><img src="../img/logout.png" width="25px" height="25px" title="Logout"></a></div>
+		
 
 	<table>
 	<center>
 	<tr>
-						<td width="150px"><h2><i><font color="Red">Freelance</font></i></h2></td>
-						<td  width="100px"><a href="profile.php">Profile</a></td>
-						<td width="100px"><a href="viewinfo.php">View Info</a></td>
-						<td width="100px"><a href="Logout.php">Logout</a></td>
-						<td width="100px"><a href="Jobreq.php">Job Requests</a></td>
-						<td width="100px"><a href="FreelancerDetails.php">Freelancer Details</a></td>
-						<td width="100px"><a href="Analytics.php">Analytics</a></td>
-						<td width="100px"><a href="UserAnalysis.php">User Analysis</a></td>
-						<td width="80px"><a href="Message.php">Message</a></td>
-						<td width="100px"><a href="Notification.php">Notificstion</a></td>
-						<td width="80px"><a href="home.php"><img src="a.jpg" width="40px" height="40px"></a>
-						<br>
-						<a href = "Logout.php"><h3>LogOut</h3></a></td>
+				
 					</tr>
 					
 					 <tr>
@@ -256,25 +257,25 @@ if(isset($_COOKIE['uname'])){
 			<table cellpadding="5px">
 			<tr>
 					<td>
-			Id:<br><input type="text" name="id" value="">
+			Id:<br><input type="text" name="id" class="input" value="">
 			</td>
 				<td>
-			Username:<br><input type="text" name="uname" value="">
-			</td>
-			
-			
-				<td>
-			Email:<br><input type="email" name="email" value="">
+			Username:<br><input type="text" name="uname" class="input" value="">
 			</td>
 			
 			
 				<td>
-			Password <br><input type="password" name="pass" value="">
+			Email:<br><input type="email" name="email" class="input" value="">
 			</td>
 			
 			
 				<td>
-			Confirm Password<br><input type="password" name="cpass" value="">
+			Password <br><input type="password" name="pass" class="input" value="">
+			</td>
+			
+			
+				<td>
+			Confirm Password<br><input type="password" name="cpass" class="input" value="">
 			</td>
 			
 
@@ -323,7 +324,7 @@ if(isset($_COOKIE['uname'])){
 		<table>
 			<tr>
 				<td>
-					<input type="text" name="search" id="search" onkeyup="search(this.value)"><br>
+					<input type="text" name="search" class="input" id="search" onkeyup="search(this.value)"><br>
 					<div id="result"></div>
 				</td>
 					<td>

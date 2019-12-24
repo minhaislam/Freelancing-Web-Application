@@ -28,13 +28,13 @@ if(isset($_POST['login'])){
 		elseif($user["utype"]=='Seller'){
 					setcookie("uname", $user["uname"], time()+3600, "/");
 			$_SESSION['uname']=$user["uname"];
-			header('location: ../html/SellerHome.html');
+			header('location: SellerHome.php');
 
 		}
 		elseif($user["utype"]=='Buyer'){
 					setcookie("uname", $user["uname"], time()+3600, "/");
 			$_SESSION['uname']=$user["uname"];
-			header('location: ../html/BuyerHome.html');
+			header('location: buyerhome.php');
 
 		}
 		
